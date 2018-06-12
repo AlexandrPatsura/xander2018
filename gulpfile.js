@@ -35,8 +35,8 @@ const paths = {
     dest: 'build/assets/'
   },
   fonts: {
-    src: 'src/styles/fonts/**/*.*',
-    dest: 'build/assets/styles/fonts/'
+    src: 'src/fonts/**/*.*',
+    dest: 'build/assets/fonts/'
   },
   styles: {
     src: 'src/styles/**/*.scss',
