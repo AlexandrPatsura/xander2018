@@ -4,20 +4,11 @@ block variables
   - var title = "Welcome"
 
 block content
-  //-   <div class="wrap">
-  //-     <div class="card">
-  //-       <div class="front"><span>Front</span></div>
-  //-       <div class="back"><span>Back</span></div>
-  //-     </div>
-  //-   </div>
-
-
-  //- .container
   header.header
-    .auth
-      button.auth__btn Авторизоваться
+    .authorization
+      button.authorization__btn Авторизоваться
     .hero__block
-      .font__block
+      .front__block
         .hero__avatar
           img(src="assets/images/avatar.jpg", alt="user-avatar").hero__img
         .hero__info
@@ -60,14 +51,14 @@ block content
             label(for="pass").input__wrapper
               svg(width="15" height="16").auth-form__sprite.pass
                 use(xlink:href="assets/images/sprites/sprite.svg#password")
-        form.auth-form__captcha
           .auth-form__row
             label.captcha__checkbox
               input.checkbox(type="checkbox", name="checkbox")
               span.checkbox-custom
               span.label Я человек
-          .question Вы точно не робот?
+          p.question Вы точно не робот?
           .captcha-radio
+            
             label.captcha__radio
               input.radio(type="radio", name="radio")
               span.radio-custom
@@ -80,11 +71,11 @@ block content
           ul.menu
             -
               var pages = [
-                ["index.html", "На главную"],
-                ["about.html", "Войти"],
+                ["#", "На главную"],
+                ["#", "Войти"],
               ]
             each page in pages
-              li.menu__item.menu__item_width
+              li.menu__item
                 a.menu__link(href=`${page[0]}`) #{page[1]}
     .copy
       p &copy; Alexandr Patsura 2018
