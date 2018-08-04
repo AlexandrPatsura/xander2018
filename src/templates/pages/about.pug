@@ -1,0 +1,61 @@
+extends ../template
+
+block variables
+  - var title = "About"
+
+block content
+  header.header
+    .header__nav-bar
+      .header__socials
+        ul.socials
+          -
+            var socials = [
+              ["vk", "https://vk.com/alexanderpatsura"],
+              ["github", "https://github.com/AlexandrPatsura"],
+              ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each social in socials
+            li.socials__item
+              a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
+                svg(width="30" height="22").socials__sprite
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
+      .toggle-menu
+        span.sandwich
+          span.top
+          span.center
+          span.bottom
+      nav.menu-fullscreen
+        ul.menu.menu-column
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"],
+            ]
+          each page in pages
+            li.menu-fullscreen__item
+              a(href=`${page[0]}`).menu-fullscreen__link.title.title-color #{page[1]}
+    .hero__page-title
+      svg(width="1176" height="313").portfolio__header
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprites/sprite.svg#portfolio_header")
+    .hero__block
+      .hero__avatar
+        img(src="assets/images/avatar.jpg", alt="user-avatar").hero__img
+      .hero__info.hero__info_color
+        h2.hero__name Пацура Александр
+        p.hero__desc Личный сайт веб разработчика
+        
+
+  section.about
+    .about__title обо мне
+    .about__left
+      img(src="assets/images/avatar.jpg", alt="user-avatar")
+      .about__subtitle Кто я
+      p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    .about__right
+      .about__subtitle Чем я могу быть вам полезен
+      p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+
+    //- p &copy; Alexandr Patsura 2018

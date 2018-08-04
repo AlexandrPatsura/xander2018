@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head></head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/x-icon">
-  <link rel="stylesheet" href="assets/styles/app.min.css">
-  <title>Welcome</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/x-icon"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <title>Welcome</title>
+  </head>
 </html>
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="authorization">
-        <button class="authorization__btn">Авторизоваться</button>
+      <div class="header__top">
+        <div class="header__nav header__auth"><a class="auth-btn" href="#">Авторизоваться</a></div>
       </div>
-      <div class="hero__block">
-        <div class="front__block">
-          <div class="hero__avatar"><img class="hero__img" src="assets/images/avatar.jpg" alt="user-avatar"></div>
-          <div class="hero__info">
-            <h2 class="hero__name">Пацура Александр</h2>
+      <div class="header__main">
+        <div class="hero">
+          <div class="hero__front"><img class="hero__avatar" src="assets/images/avatar.jpg" alt="user-avatar">
+            <h2 class="hero__name">Alexandr Patsura</h2>
             <p class="hero__desc">Личный сайт веб разработчика</p>
+            <nav class="info__socials">
+              <ul class="social">
+                <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
+                    <svg class="socials__sprite socials__sprite_color" width="30" height="22">
+                      <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
+                    <svg class="socials__sprite socials__sprite_color" width="30" height="22">
+                      <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
+                    <svg class="socials__sprite socials__sprite_color" width="30" height="22">
+                      <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </nav>
+            <nav class="info__menu">
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="works.html">Мои работы</a></li>
+                <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
+                <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
+              </ul>
+            </nav>
           </div>
-          <nav class="info__socials">
-            <ul class="social">
-              <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
-                  <svg class="socials__sprite sprite_color" width="30" height="22">
-                    <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
-                  <svg class="socials__sprite sprite_color" width="30" height="22">
-                    <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
-                  <svg class="socials__sprite sprite_color" width="30" height="22">
-                    <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
-                  </svg></a></li>
-            </ul>
-          </nav>
-          <nav class="info__menu">
-            <ul class="menu">
-              <li class="menu__item"><a class="menu__link" href="works.html">Мои работы</a></li>
-              <li class="menu__item"><a class="menu__link" href="about.html">Обо мне</a></li>
-              <li class="menu__item"><a class="menu__link" href="blog.html">Блог</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="back__block">
-          <h2 class="subtitle">Авторизуйтесь</h2>
-          <form class="auth-form">
+          <div class="hero__back">
+            <h2 class="subtitle">Авторизуйтесь</h2>
             <div class="auth-form__row">
               <input class="auth-form__input" type="text" placeholder="Логин" id="login">
-              <label class="input__wrapper" for="login">
+              <label class="input__label" for="login">
                 <svg class="auth-form__sprite login" width="15" height="16">
                   <use xlink:href="assets/images/sprites/sprite.svg#login"></use>
                 </svg>
@@ -58,37 +56,27 @@
             </div>
             <div class="auth-form__row">
               <input class="auth-form__input" type="password" placeholder="Пароль" id="pass">
-              <label class="input__wrapper" for="pass">
+              <label class="input__label" for="pass">
                 <svg class="auth-form__sprite pass" width="15" height="16">
                   <use xlink:href="assets/images/sprites/sprite.svg#password"></use>
                 </svg>
               </label>
             </div>
             <div class="auth-form__row">
-              <label class="captcha__checkbox">
-                <input class="checkbox" type="checkbox" name="checkbox"><span class="checkbox-custom"></span><span class="label">Я человек</span>
+              <input class="checkbox__custom" type="checkbox" name="checkbox" id="checkbox">
+              <label class="checkbox__label" for="checkbox">Я человек
+                <svg class="auth-form__sprite check" width="12" height="10">
+                  <use xlink:href="assets/images/sprites/sprite.svg#check"></use>
+                </svg>
               </label>
             </div>
-            <p class="question">Вы точно не робот?</p>
-            <div class="captcha-radio">
-              <label class="captcha__radio">
-                <input class="radio" type="radio" name="radio"><span class="radio-custom"></span><span class="label">Да</span>
-              </label>
-              <label class="captcha__radio">
-                <input class="radio" type="radio" name="radio"><span class="radio-custom"></span><span class="label">Не уверен</span>
-              </label>
-            </div>
-          </form>
-          <nav class="info__menu">
-            <ul class="menu">
-              <li class="menu__item"><a class="menu__link" href="#">На главную</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Войти</a></li>
-            </ul>
-          </nav>
+          </div>
         </div>
       </div>
-      <div class="copy">
-        <p>&copy; Alexandr Patsura 2018</p>
+      <div class="header__footer">
+        <div class="copy">
+          <p>&copy; Alexandr Patsura 2018</p>
+        </div>
       </div>
     </header>
   </div>

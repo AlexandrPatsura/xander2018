@@ -5,77 +5,62 @@ block variables
 
 block content
   header.header
-    .authorization
-      button.authorization__btn Авторизоваться
-    .hero__block
-      .front__block
-        .hero__avatar
-          img(src="assets/images/avatar.jpg", alt="user-avatar").hero__img
-        .hero__info
-          h2.hero__name Пацура Александр
+    //- .header__bg
+    .header__top
+      .header__nav.header__auth
+        a(href="#").auth-btn Авторизоваться
+    .header__main
+      .hero
+        .hero__front
+
+          img.hero__avatar(src="assets/images/avatar.jpg", alt="user-avatar")
+          h2.hero__name Alexandr Patsura
           p.hero__desc Личный сайт веб разработчика
-        nav.info__socials
-          ul.social
-            -
-              var socials = [
-                ["vk", "https://vk.com/alexanderpatsura"],
-                ["github", "https://github.com/AlexandrPatsura"],
-                ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
-              ]
-            each social in socials
-              li.socials__item
-                a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
-                  svg(width="30" height="22").socials__sprite.sprite_color
-                    use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
-        nav.info__menu
-          ul.menu
-            -
-              var pages = [
-                ["works.html", "Мои работы"],
-                ["about.html", "Обо мне"],
-                ["blog.html", "Блог"],
-              ]
-            each page in pages
-              li.menu__item
-                a.menu__link(href=`${page[0]}`) #{page[1]}
-      .back__block
-        h2.subtitle Авторизуйтесь
-        form.auth-form
+          nav.info__socials
+            ul.social
+              -
+                var socials = [
+                  ["vk", "https://vk.com/alexanderpatsura"],
+                  ["github", "https://github.com/AlexandrPatsura"],
+                  ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+                ]
+              each social in socials
+                li.socials__item
+                  a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
+                    svg(width="30" height="22").socials__sprite.socials__sprite_color
+                      use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
+
+          nav.info__menu
+            ul.menu
+              -
+                var pages = [
+                  ["works.html", "Мои работы"],
+                  ["about.html", "Обо мне"],
+                  ["blog.html", "Блог"],
+                ]
+              each page in pages
+                li.menu__item
+                  a.menu__link(href=`${page[0]}`) #{page[1]}
+
+        .hero__back
+          h2.subtitle Авторизуйтесь
           .auth-form__row
             input.auth-form__input(type="text", placeholder="Логин", id="login")
-            label(for="login").input__wrapper
+            label(for="login").input__label
               svg(width="15" height="16").auth-form__sprite.login
                 use(xlink:href="assets/images/sprites/sprite.svg#login")
           .auth-form__row
             input.auth-form__input(type="password", placeholder="Пароль", id="pass")
-            label(for="pass").input__wrapper
+            label(for="pass").input__label
               svg(width="15" height="16").auth-form__sprite.pass
                 use(xlink:href="assets/images/sprites/sprite.svg#password")
           .auth-form__row
-            label.captcha__checkbox
-              input.checkbox(type="checkbox", name="checkbox")
-              span.checkbox-custom
-              span.label Я человек
-          p.question Вы точно не робот?
-          .captcha-radio
+            input.checkbox__custom(type="checkbox" name="checkbox" id="checkbox")
             
-            label.captcha__radio
-              input.radio(type="radio", name="radio")
-              span.radio-custom
-              span.label Да
-            label.captcha__radio
-              input.radio(type="radio", name="radio")
-              span.radio-custom
-              span.label Не уверен
-        nav.info__menu
-          ul.menu
-            -
-              var pages = [
-                ["#", "На главную"],
-                ["#", "Войти"],
-              ]
-            each page in pages
-              li.menu__item
-                a.menu__link(href=`${page[0]}`) #{page[1]}
-    .copy
-      p &copy; Alexandr Patsura 2018
+            label(for="checkbox").checkbox__label Я человек
+              svg(width="12" height="10").auth-form__sprite.check
+                use(xlink:href="assets/images/sprites/sprite.svg#check")
+
+    .header__footer
+      .copy
+        p &copy; Alexandr Patsura 2018
