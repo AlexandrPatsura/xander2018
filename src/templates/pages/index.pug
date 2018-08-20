@@ -61,6 +61,28 @@ block content
               svg(width="12" height="10").auth-form__sprite.check
                 use(xlink:href="assets/images/sprites/sprite.svg#check")
 
+          p.question Вы точно не робот?
+          .captcha-radio
+            
+            label.captcha__radio
+              input.radio(type="radio", name="radio")
+              span.radio-custom
+              span.label Да
+            label.captcha__radio
+              input.radio(type="radio", name="radio")
+              span.radio-custom
+              span.label Не уверен
+          nav.info__menu
+            ul.menu
+              -
+                var pages = [
+                  ["#", "На главную"],
+                  ["#", "Войти"],
+                ]
+              each page in pages
+                li.menu__item
+                  a.menu__link(href=`${page[0]}`) #{page[1]}
+
     .header__footer
       .copy
         p &copy; Alexandr Patsura 2018

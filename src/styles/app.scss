@@ -36,8 +36,6 @@ a {
 //   margin: 0 auto;
 // }
 
-
-
 .hero__page-title {
   display: flex;
   justify-content: center;
@@ -97,7 +95,6 @@ a {
   flex: 1 1 auto;
   position: relative;
   perspective: 1000px;
-  
   margin-top: -93px;
 }
 
@@ -130,165 +127,14 @@ a {
   transform: rotateY(0);
 }
 
-// ==================================================== .front__block ====================================================
-
-// .hero__avatar {
-//   padding: 40px 0 0;
-// }
-
-// .hero__img {
-//   width: 141px;
-//   border-radius: 50%;
-// }
-
 .hero__info_color {
   color: #fff;
 }
 
-// .hero__name {
-//   font-family: 'RobotoMedium', sans-serif;
-//   font-size: 35px;
-//   font-weight: 500;
-//   margin-top: 15px;
-//   margin-bottom: 8px;
-// }
-
-// .hero__desc {
-//   font-family: 'RobotoLight', sasn-serif;
-//   opacity: .8;
-//   margin: 0;
-// }
-
-// .info__socials {
-//   padding-top: 33px;
-//   margin-bottom: auto;
-// }
-
-// .socials__link {
-//   padding: 0 14px;
-// }
-
-// .socials__sprite {
-//   fill: rgba(255, 255, 255, .5);
-//   transition: 0.5s;
-//   &:hover {
-//     fill: #fff;
-//     transition: 0.5s;
-//   }
-// }
-
-// .sprite_color {
-//   fill: rgba($baseColor, .5);
-//   transition: 0.5s;
-//   &:hover {
-//     fill: $baseColor;
-//     transition: 0.5s;
-//   }
-// }
-
-// .social {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .menu__item {
-//   display: flex;
-//   flex: 1 1 auto;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: rgba($darkBaseColor, .5);
-//   transition: .5s;
-//   border-right: 2px solid rgba(255, 255, 255, .502);
-  
-//   &:hover {
-//     background-color: $baseColor;
-//     transition: .5s;
-//   }
-  
-//   &:last-child {
-//     border-right: none;
-//   }
-// }
-
-// .menu__link {
-//   color: #fff;
-//   padding: 13px 0;
-//   width: 100%;
-// }
-
-// ==================================================== .back__block ====================================================
-
-// .subtitle {
-//   font-family: 'BernierRegular';
-//   font-size: 35px;
-//   position: relative;
-//   font-weight: 400;
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 17px;
-//     width: 22px;
-//     height: 5px;
-//     background-color: $marengo;
-//     opacity: 0.2;
-//   }
-//   &::before {
-//     left: 50px;
-//   }
-//   &::after {
-//     right: 50px;
-//   }
-// }
-
-.auth-form {
+.auth-form,
+.captcha-radio {
   margin-bottom: auto;
 }
-
-// .auth-form__row {
-//   display: flex;
-//   justify-content: center;
-//   padding: 0 20px;
-//   margin-bottom: 20px;
-// }
-
-// .input__wrapper {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: #f0efe9;
-//   border-radius: 5px 0px 0px 5px;
-//   color: #606468;
-//   fill: rgb(196, 203, 205);
-//   height: 45px;
-//   width: 45px;
-// }
-
-// .auth-form__input {
-//   width: 295px;
-//   height: 45px;
-//   outline: none;
-//   background-color: #ffffff;
-//   border-radius: 0px 5px 5px 0px;
-//   color: rgba(155, 158, 160, 0.5);
-//   padding: 0 20px;
-//   border: 1px solid transparent;
-//   box-sizing: border-box;
-//   order: 1;
-//   &:focus {
-//     border-color: $baseColor;
-//   }
-//   &:focus + .input__wrapper {
-//     fill: $baseColor;
-//   }
-  
-//   &::before {
-//     display: inline-block;
-//     width: 20px;
-//     height: 20px;
-//     background-color: #000;
-//   }
-// }
 
 // checkbox + radio
 
@@ -320,31 +166,6 @@ a {
   margin-right: 10px;
   position: relative;
 }
-
-// .checkbox-custom {
-//   background-color: #ffffff;
-//   border: 2px solid #ffffff;
-// }
-
-// .checkbox:checked + .checkbox-custom{
-//   background-color: $baseColor;
-//   border: 2px solid $baseColor;
-// }
-
-// .checkbox:checked + .checkbox-custom::before {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 3px;
-//   left: 3px;
-//   color: #ffffff;
-//   height: 5px;
-//   width: 8px;
-//   border-left: 2px solid;
-//   border-bottom: 2px solid;
-//   // background-color: $baseColor;
-//   transform: rotate(-45deg);
-// }
 
 .question {
   font-family: 'RobotoBold';
@@ -389,6 +210,7 @@ a {
     border-right: none;
   }
 }
+
 .menu-column {
   // display: flex;
   // flex-direction: column;
@@ -436,6 +258,7 @@ a {
     opacity: 0;
   }
 }
+
 @keyframes hide-tg-menu {
   0% {
     width: 40px;
@@ -458,6 +281,7 @@ a {
     opacity: 0;
   }
 }
+
 .toggle-menu {
   z-index: 10;
 }
@@ -502,6 +326,7 @@ a {
   top: -15px;
   transform: rotate(-135deg);
 }
+
 .menu-fullscreen {
   display: none;
   justify-content: center;
@@ -522,15 +347,9 @@ a {
     // }
 }
   
-// .copy {
-  // flex: 0 1 96px;
-  // min-height: 96px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // font-family: $robotolight;
-  // color: #fff;
-// }
+
+
+
 
 
 
