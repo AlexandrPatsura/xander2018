@@ -2,23 +2,26 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 91px 1fr 91px;
-  // display: flex;
-  // flex-direction: column;
-  width: 100%;
+  // width: 100%;
   height: 100vh;
   min-height: 600px;
   background: url('../images/background.png') $baseColor no-repeat center center / cover;
-  
   position: relative;
   
   grid-template-areas: 'header__top'
-  'header__main'
-  'header__footer';
+                       'header__main'
+                       'header__footer';
 }
 
 .header__top {
   grid-area: header__top;
   align-self: center;
+  justify-self: end;
+
+  @media screen and (max-width: 600px) {
+    justify-self: center;
+    padding: 0;
+  }
 }
 
 .header__main {
@@ -49,12 +52,9 @@
 }
 
 .header__auth {
-  display: flex;
-  justify-content: flex-end;
   padding-right: 100px;
-  
-  @media screen and (max-width: 600px) {
-    justify-content: center;
+
+  @media screen and (max-width: 425px) {
     padding: 0;
   }
 }
@@ -66,6 +66,7 @@
   color: #fff;
   text-decoration: none;
   transition: all 0.7s;
+
   &:hover {
     background-color: #fff;
     color: $baseColor;
@@ -74,20 +75,16 @@
 }
 
 .hero {
-  display: flex;
-  flex: 1 1 auto;
-  // flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-  // margin-top: -100px;
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  width: 380px;
+  height: 395px;
+  // min-height: 400px;
+  margin-top: -40px;
+  position: relative;
   perspective: 1000px;
+
+  @media screen and (max-width: 425px) {
+    width: 300px;
+  }
 }
 
 .hero__front,
@@ -95,21 +92,16 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: -40px;
   padding-top: 40px;
   align-items: center;
-  width: 380px;
-  height: 395px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255,255,255,0.8);
   border-radius: 5px;
   box-sizing: border-box;
   transition: 1s;
   backface-visibility: hidden;
   position: absolute;
-  
-  @media screen and (max-width: 425px) {
-    width: 300px;
-  }
 }
 
 .hero__back {
@@ -158,11 +150,24 @@
 
 .social {
   display: flex;
+  justify-content: space-between;
 }
 
-.socials__link {
-  margin: 0 14px;
+.socials__item {
+  padding: 0 16px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
+
+// .socials__link {
+//   margin: 0 14px;
+// }
 
 .socials__sprite {
   fill: rgba(255, 255, 255, .5);
@@ -251,7 +256,6 @@
 }
 
 .auth-form__input {
-  // width: 295px;
   width: 100%;
   height: 45px;
   outline: none;
