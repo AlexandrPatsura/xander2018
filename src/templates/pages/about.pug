@@ -35,7 +35,8 @@ block content
             ]
           each page in pages
             li.menu-fullscreen__item
-              a(href=`${page[0]}`).menu-fullscreen__link.title.title-color #{page[1]}
+              a(href=`${page[0]}`).menu-fullscreen__link
+                span.title #{page[1]}
     .hero__page-title
       svg(width="1176" height="313").portfolio__header
           use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprites/sprite.svg#portfolio_header")

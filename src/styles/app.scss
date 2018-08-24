@@ -212,12 +212,11 @@ a {
 }
 
 .menu-column {
-  // display: flex;
-  // flex-direction: column;
-  display: block;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .menu-item_bgc {
   // background-color: rgba($baseColor, $alpha50);
@@ -327,6 +326,8 @@ a {
   transform: rotate(-135deg);
 }
 
+// ========================================== menu-fullscreen ==========================================
+
 .menu-fullscreen {
   display: none;
   justify-content: center;
@@ -334,19 +335,57 @@ a {
   position: fixed;
   width: 100%;
   height: 100%;
-  // background-color: rgba($baseColor, $alpha87);
+  background-color: rgba($baseColor, 0.87);
   top: 0;
   left: 0;
   z-index: 5;
   text-align: center;
 }
 
-.menu-fullscreen__item {
-  width: 100%;
-  // &:hover {
-    // background-color: rgba($baseColor, $alpha87);
-    // }
+.menu-fullscreen__link {
+  position: relative;
+  display: block;
+  color: #ffffff;
+  transition: 0.4s;
+  padding: 45px 0 30px;
+
+  &:hover {
+    background-color: rgba($marengo, 0.2);
+    transition: 0.4s;
+
+    .title {
+      transition: 0.4s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 33px;
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 22px;
+        height: 5px;
+      }
+
+      &::before {
+        left: -39px;
+      }
+
+      &::after {
+        right: -35px;
+      }
+    }
+  }
 }
+
+.title {
+  font-family: $bernierReg;
+  font-size: 63px;
+  letter-spacing: 5px;
+  font-weight: 400;
+  position: relative;
+}
+
+
 
 
 // ==========================================
